@@ -1,0 +1,25 @@
+<div class="container">
+
+	<h1>New Image</h1>
+
+	<form>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Description</label> <input
+				type="text" class="form-control" [(ngModel)]="description">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputFile">File input</label> <input type="file"
+				(change)="selectFile($event)">
+		</div>
+		<button type="submit" class="btn btn-default" (click)="upload()">Submit</button>
+	</form>
+
+	<h1>Images</h1>
+
+	<div *ngFor="#image of images">
+		<img src="/images/{{image.fileName}}" />
+		<span>{{image.description}}</span> 
+	</div>
+
+
+</div>
