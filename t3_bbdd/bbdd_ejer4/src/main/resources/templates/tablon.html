@@ -1,0 +1,25 @@
+<html>
+<body>
+	<h1>Tablón Anuncios</h1>
+	
+	<h3>Ordenado por {{sortedBy}}</h3>
+	
+	<p><a href="/?sort=nombre&page={{numPage}}">Ordenar por nombre</a></p>
+	<p><a href="/?sort=asunto&page={{numPage}}">Ordenar por asunto</a></p>
+	
+	{{#anuncios}}
+	<a href="anuncio/{{id}}">{{nombre}} {{asunto}}</a><br>
+	{{/anuncios}}
+	   
+	{{#showPrev}}
+	<a href="/?sort={{sortedBy}}&page={{prevPage}}">Prev</a>
+	{{/showPrev}}
+	{{numPage}}
+	{{#showNext}}
+	<a href="/?sort={{sortedBy}}&page={{nextPage}}">Next</a>
+	{{/showNext}}
+	
+	<br>
+	<a href="nuevoAnuncio.html">Nuevo anuncio</a>
+</body>
+</html>

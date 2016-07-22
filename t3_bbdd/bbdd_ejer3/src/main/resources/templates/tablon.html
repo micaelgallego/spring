@@ -1,0 +1,19 @@
+<html>
+<body>
+	<h1>Tablón Anuncios</h1>
+	{{#anuncios}}
+	<a href="anuncio/{{id}}">{{nombre}} {{asunto}}</a><br>
+	{{/anuncios}}
+	   
+	{{#showPrev}}
+	<a href="/?page={{prevPage}}">Prev</a>
+	{{/showPrev}}
+	{{numPage}}
+	{{#showNext}}
+	<a href="/?page={{nextPage}}">Next</a>
+	{{/showNext}}
+	
+	<br>
+	<a href="nuevoAnuncio.html">Nuevo anuncio</a>
+</body>
+</html>
